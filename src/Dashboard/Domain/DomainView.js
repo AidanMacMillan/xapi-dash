@@ -9,7 +9,7 @@ class DomainView extends Component {
 				<div className="cardBody">
 					<label>xAPI Domain</label>
 					<input placeholder=""></input>
-					<div className="doubleGrid">
+					<div className="autoGrid">
 						<div>
 							<label>Username</label>
 							<input placeholder=""></input>
@@ -19,8 +19,11 @@ class DomainView extends Component {
 							<input placeholder=""></input>
 						</div>
 				  	</div>
-					<button>Save Domain Settings</button>
+					
 				</div>
+				<button className="cardFooter">
+					Save Domain Settings
+				</button>
 			</div>
 	  	</div>;
 	}

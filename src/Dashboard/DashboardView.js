@@ -5,7 +5,7 @@ import PostView from './Post/PostView';
 
 class DashboardView extends Component {
 	render() {
-		return <div className="dashboard" style={{top: -this.props.dashboard*window.innerHeight + "px"}}>
+		return <div className="dashboard" style={{top: -this.props.dashboard*100 + "%"}}>
 			<DomainView></DomainView>
 			<PostView></PostView>
 		</div>;

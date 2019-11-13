@@ -11,8 +11,8 @@
 	grid-column: 2 / 4;
 }
 
-.postStatementGrid {
+.autoGrid {
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: repeat(6, auto);
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }

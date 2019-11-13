@@ -7,23 +7,27 @@ class DomainView extends Component {
 			<div className="card postStatement">
 				<div className="cardTitle">Post Statement<i className="material-icons cardIcon">keyboard_arrow_up</i></div>
 				<div className="cardBody">
-					<div className="postStatementGrid">
+					<div className="autoGrid">
 						<div>
 							<label>Actor</label>
-							<input placeholder=""></input>
+							<input value="LMS Username"></input>
 						</div>
 						<div>
 							<label>Account</label>
-							<input placeholder=""></input>
+							<input value="123456"></input>
 						</div>
 						<div>
 							<label>Homepage</label>
-							<input placeholder=""></input>
+							<input value="https://companyname.com"></input>
 						</div>
 						<div>
 							<label>Verb</label>
-							<input placeholder=""></input>
+							<select>
+								<option>Initialized</option>
+							</select>
 						</div>
+					</div>
+					<div className="autoGrid">
 						<div>
 							<label>Object</label>
 							<input placeholder=""></input>
@@ -34,6 +38,9 @@ class DomainView extends Component {
 						</div>
 					</div>
 				</div>
+				<button className="cardFooter">
+					Post Statement
+				</button>
 			</div>
 	  	</div>;
 	}
