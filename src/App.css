@@ -1,22 +1,87 @@
 .App {
-  text-align: center;
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+	height: 100%;
+	overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
+h1, h3 {
+	margin: 5px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h3 {
+	font-weight: lighter;
 }
 
-.App-link {
-  color: #09d3ac;
+.card {
+	background-image: linear-gradient(to bottom, #212121 0%,#161616 100%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	color: white;
+	min-height: 120px;
+}
+
+.cardTitle {
+	position: relative;
+	background-color: #161616;
+	height: 60px;
+	padding: 10px 20px;
+	font-size: 30px;
+	font-weight: lighter;
+	box-sizing: border-box;
+}
+
+.cardBody {
+	position: relative;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.cardIcon {
+	position: absolute;
+	font-size: 40px;
+	right: 20px;
+}
+
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: lighter;
+}
+
+input {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+	padding: 0px 10px;
+	box-sizing: border-box;
+}
+
+button {
+	position: relative;
+	border: none;
+	background-color: white;
+	margin-top: 15px;
+	height: 30px;
+	width: 100%;
+}
+
+button::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0%;
+	height: 30px;
+	top: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.05);
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+button:hover::before{
+	width: 100%;
+}
+
+.material-icons {
+	pointer-events: none;
 }

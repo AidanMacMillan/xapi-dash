@@ -1,0 +1,17 @@
+.domain {
+	display: grid;
+	grid-gap: 20px;
+	align-items: center;
+	grid-template-columns: auto 400px 400px auto;
+	height: 100vh;
+}
+
+.domainForm {
+	grid-column: 2 / 4;
+}
+
+.doubleGrid {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: auto auto;
+}

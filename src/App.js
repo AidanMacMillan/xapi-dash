@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import DashboardView from './Dashboard/DashboardView';
+import NavView from './Nav/NavView'
+import NavIndicator from './Nav/NavIndicator'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Dashboard = {
+	DOMAIN: 0,
+	POST_STATEMENTS: 1,
+	GET_STATEMENTS: 2
+}
+
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {dashboard: Dashboard.DOMAIN};
+	}
+
+	handleNavChange = (dashboard) => {
+		this.setState({dashboard: dashboard});
+	}
+
+	render() {
+		return <div className="App">
+			<NavView dashboard={this.state.dashboard} onNavChange={this.handleNavChange}></NavView>
+			<DashboardView dashboard={this.state.dashboard}></DashboardView>
+			<NavIndicator dashboard={this.state.dashboard} onNavChange={this.handleNavChange}></NavIndicator>
+		</div>;
+	}
 }
 
 export default App;
