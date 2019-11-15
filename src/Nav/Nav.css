@@ -77,6 +77,12 @@
 	right: 7px;
 }
 
+.navWarning {
+	position: absolute;
+	color: red;
+	font-size: 12px;
+}
+
 .navIndicator {
 	overflow: hidden;
 	position: absolute;
@@ -104,4 +110,3 @@
 	background-color: rgba(0,0,0,0.2);
 	width: 15px!important;
 }
-

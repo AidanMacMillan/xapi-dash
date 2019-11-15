@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Nav.css'
-import { Domain } from 'domain';
 
 const Dashboard = {
 	DOMAIN: 0,
@@ -9,10 +8,6 @@ const Dashboard = {
 }
 
 class NavIndicator extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	handleNavClick(dashboard) {
 		this.props.onNavChange(dashboard);
 	}

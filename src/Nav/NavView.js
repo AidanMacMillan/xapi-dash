@@ -26,10 +26,12 @@ class NavView extends Component {
 			<div className={this.props.dashboard === Dashboard.POST_STATEMENTS ? "navItem navItemSelected" : "navItem"} onClick={() => this.handleNavClick(Dashboard.POST_STATEMENTS)}>
 				POST Statements
 				<i className="material-icons navIcon">keyboard_arrow_up</i>
+				{this.props.domain === "" ? <div className="navWarning">xAPI Domain settings must be set</div> : null}
 			</div>
 			<div className={this.props.dashboard === Dashboard.GET_STATEMENTS ? "navItem navItemSelected" : "navItem"}  onClick={() => this.handleNavClick(Dashboard.GET_STATEMENTS)}>
 				GET Statements
 				<i className="material-icons navIcon">get_app</i>
+				{this.props.domain === "" ? <div className="navWarning">xAPI Domain settings must be set</div> : null}
 			</div>
 		</div>
 	  </div>;

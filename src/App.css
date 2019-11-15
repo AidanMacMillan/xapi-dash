@@ -13,8 +13,6 @@ h3 {
 }
 
 .card {
-	background-image: linear-gradient(to bottom, #212121 0%,#161616 100%);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	color: white;
 	min-height: 120px;
 }
@@ -27,9 +25,12 @@ h3 {
 	font-size: 30px;
 	font-weight: lighter;
 	box-sizing: border-box;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cardBody {
+	background-image: linear-gradient(to bottom, #212121 0%,#161616 100%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	position: relative;
 	padding: 20px;
 	box-sizing: border-box;
@@ -40,10 +41,37 @@ h3 {
 	font-weight: bolder;
 	font-size: 20px;
 	margin-top: 0px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button.cardFooter::before {
 	height: 50px;
+}
+
+.cardInfo {
+	height: 0px;
+	padding: 0px;
+	text-align: center;
+	overflow: hidden;
+	transition: 0.25s;
+	background-color: white;
+	box-sizing: border-box;
+	margin-bottom: 25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardError {
+	padding: 2px;
+	height: 25px;
+	background-color: red;
+	margin-bottom: 0px;
+}
+
+.cardSuccess {
+	padding: 2px;
+	height: 25px;
+	background-color: green;
+	margin-bottom: 0px;
 }
 
 .cardIcon {
@@ -71,9 +99,18 @@ button {
 	position: relative;
 	border: none;
 	background-color: white;
-	margin-top: 15px;
 	height: 30px;
 	width: 100%;
+}
+
+.errorButton {
+	background-color: red;
+	color: white;
+	height: 40px;
+}
+
+button:disabled {
+	background-color: #ddd;
 }
 
 button::before {
@@ -91,6 +128,10 @@ button::before {
 
 button:hover::before{
 	width: 100%;
+}
+
+button:disabled:hover::before {
+	width: 0%;
 }
 
 .material-icons {

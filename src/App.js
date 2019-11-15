@@ -13,17 +13,21 @@ const Dashboard = {
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {dashboard: Dashboard.DOMAIN};
+		this.state = {dashboard: Dashboard.DOMAIN, domain: ""};
 	}
 
 	handleNavChange = (dashboard) => {
 		this.setState({dashboard: dashboard});
 	}
 
+	updateDomain = (domain) => {
+		this.setState({domain: domain});
+	}
+
 	render() {
 		return <div className="App">
-			<NavView dashboard={this.state.dashboard} onNavChange={this.handleNavChange}></NavView>
-			<DashboardView dashboard={this.state.dashboard}></DashboardView>
+			<NavView domain={this.state.domain} dashboard={this.state.dashboard} onNavChange={this.handleNavChange}></NavView>
+			<DashboardView dashboard={this.state.dashboard} updateDomain={this.updateDomain} onNavChange={this.handleNavChange}></DashboardView>
 			<NavIndicator dashboard={this.state.dashboard} onNavChange={this.handleNavChange}></NavIndicator>
 		</div>;
 	}
